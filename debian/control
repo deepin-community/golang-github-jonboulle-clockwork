@@ -1,15 +1,29 @@
-Source: template-repository
-Section: unknown
-Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Source: golang-github-jonboulle-clockwork
+Section: devel
+Priority: extra
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Tim Potter <tpot@hpe.com>, Anthony Fok <foka@debian.org>
+Build-Depends: debhelper (>= 10), dh-golang, golang-any
+Standards-Version: 4.0.0
+Homepage: https://github.com/jonboulle/clockwork
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-jonboulle-clockwork.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-jonboulle-clockwork.git
+XS-Go-Import-Path: github.com/jonboulle/clockwork
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
+Package: golang-github-jonboulle-clockwork-dev
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Breaks: golang-clockwork-dev (<< 0.1.0)
+Replaces: golang-clockwork-dev (<< 0.1.0)
+Description: Simple fake clock for Go
+ Simple fake clock for Go that replaces uses of the time package
+ with a test class for testing purposes.
+
+Package: golang-clockwork-dev
+Section: oldlibs
+Architecture: all
+Depends: ${misc:Depends}, golang-github-jonboulle-clockwork-dev
+Description: Transitional package for golang-github-jonboulle-clockwork-dev
+ This is a transitional package to ease upgrades to the
+ golang-github-jonboulle-clockwork-dev package.

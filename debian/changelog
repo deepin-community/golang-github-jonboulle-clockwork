@@ -1,5 +1,87 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-jonboulle-clockwork (0.1.0-4.1) unstable; urgency=medium
 
-  * Initial release
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Holger Levsen <holger@debian.org>  Tue, 05 Jan 2021 12:37:39 +0100
+
+golang-github-jonboulle-clockwork (0.1.0-4) unstable; urgency=medium
+
+  * Fix description of transitional package
+
+ -- Anthony Fok <foka@debian.org>  Sat, 29 Jul 2017 23:03:56 -0600
+
+golang-github-jonboulle-clockwork (0.1.0-3) unstable; urgency=medium
+
+  * Build-Depends on golang-any instead of golang-go
+    and remove unnecessary Depends on golang-go from -dev package
+  * Add XS-Go-Import-Path field
+    and remove the corresponding DH_GOPKG variable in debian/rules
+  * Use debhelper (>= 10)
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright
+  * Add "Testsuite: autopkgtest-pkg-go" to debian/control
+  * Update debian/gbp.conf to do without a build-area directory
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Sat, 29 Jul 2017 08:46:44 -0600
+
+golang-github-jonboulle-clockwork (0.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Corrected short package description.
+  * Versioned Breaks/Replaces (Closes: #834027).
+    Thanks, Andreas Beckmann.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 15 Aug 2016 00:29:58 +1000
+
+golang-github-jonboulle-clockwork (0.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Added "gbp.conf".
+  * Added "watch" file.
+  * Added .install file.
+  * Modernised Vcs-Browser URL.
+  * Unversioned Breaks/Replaces.
+  * Removed needless "Built-Using".
+  * rules: removed useless "override_dh_auto_install".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 10 Jul 2016 13:04:42 +1000
+
+golang-github-jonboulle-clockwork (0.0~git20141217-5) unstable; urgency=medium
+
+  * Add transitional package config to fix various build failures for
+    packages still relying on golang-clockwork-dev
+
+ -- Tim Potter <tpot@hpe.com>  Sat, 09 Jul 2016 23:29:16 +1000
+
+golang-github-jonboulle-clockwork (0.0~git20141217-4) unstable; urgency=medium
+
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+ -- Paul Tagliamonte <paultag@debian.org>  Mon, 04 Jul 2016 08:29:49 -0400
+
+golang-github-jonboulle-clockwork (0.0~git20141217-3) unstable; urgency=medium
+
+  * Rename binary package in line with new naming policy.
+    (golang-jonboulle-clockwork-dev -> golang-github-jonboulle-clockwork-dev)
+  * d/changelog:
+    * Update my email in uploaders
+    * Use https for Vcs-Browser URI
+    * Standards-Version: 3.9.8
+
+ -- Tim Potter <tpot@hpe.com>  Mon, 09 May 2016 22:25:55 -0400
+
+golang-github-jonboulle-clockwork (0.0~git20141217-2) unstable; urgency=medium
+
+  * Rename package in line with new naming policy.
+
+ -- Tim Potter <tpot@hp.com>  Mon, 29 Jun 2015 09:46:12 +1000
+
+golang-clockwork (0.0~git20141217-1) unstable; urgency=medium
+
+  * Initial release (Closes: #784396)
+
+ -- Tim Potter <tpot@hp.com>  Wed, 06 May 2015 12:50:59 +1000
